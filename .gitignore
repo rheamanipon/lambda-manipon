@@ -1,0 +1,28 @@
+
+# Dependencies - install using Composer
+/vendor/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# AWS credentials
+.aws/
+credentials
+config
+
+# Local and deployment artifacts
+.serverless/
+.osls/
+node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

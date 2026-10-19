@@ -1,0 +1,20 @@
+{
+    "name": "manip/serverless-payroll-api",
+    "description": "Serverless Payroll Management API using PHP and AWS Lambda",
+    "autoload": {
+        "psr-4": {
+            "Manip\\ServerlessPayrollApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rhea Manipon",
+            "email": "maniponrhea1@gmail.com"
+        }
+    ],
+    "require": {
+        "bref/bref": "^3.0",
+        "aws/aws-sdk-php": "^3.401",
+        "dompdf/dompdf": "^3.1"
+    }
+}
