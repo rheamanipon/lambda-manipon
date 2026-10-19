@@ -245,12 +245,17 @@ try {
         $key = "payslips/{$payrollId}.pdf";
         uploadPdfToS3($key, $pdfContents);
 
+        
+        $bucket = getenv('S3_BUCKET') ?: 'payroll-payslips-rhea-2026';
+
         respond([
             'success' => true,
             'message' => 'Payslip generated and uploaded.',
             'data' => [
                 'payroll_id' => $payrollId,
                 's3_key' => $key,
+                'bucket' => $bucket,
+                's3_url' => "https://{$bucket}.s3.ap-southeast-2.amazonaws.com/{$key}",
             ],
         ]);
     }
